@@ -1,0 +1,19 @@
+LockedAttributes
+================
+
+This plugin extends ActiveRecord::Base by allowing database attributes to be "locked" so that they may not be changed
+by normal save operations. Instead, they will cause a validation error saying that the attribute "is locked" unless
+the save is performed inside block passed to the "unlock_attributes" method.
+
+You lock attributes simply by listing them as arguments to the class method "lock_attributes" like you would
+"attr_readonly" or "attr_protected. There are two kinds of "lock" -- always and optional.
+
+A lock can be "optional" if there is also an attribute of the same name as one of the "locked" attributes ending in
+"_locked". If this attribute is true, the attribute is locked, otherwise the attribute is not locked.
+
+Locking gives you greater control over attribute modification. The genesis for locking arose out of the need to have
+attributes be effectively "readonly" from the perspective of a web application mixed in with others that could change,
+but where a background process collecting the data from a 3rd-party source needed to be able to change these "readonly"
+values.
+
+Copyright (c) 2010 Steve Emmons, released under the MIT license
