@@ -1,0 +1,5 @@
+test:
+  adapter: mysql
+  encoding: utf8
+  database: locked_attributes_test
+  username:
