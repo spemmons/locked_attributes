@@ -1,4 +1,4 @@
-LockedAttributes
+LockedAttributes {<img src="https://secure.travis-ci.org/spemmons/locked_attributes.png?branch=master" alt="Build Status" />}[http://travis-ci.org/spemmons/locked_attributes]
 ================
 
 This plugin extends ActiveRecord::Base by allowing database attributes to be "locked" so that they may not be changed
@@ -16,4 +16,4 @@ attributes be effectively "readonly" from the perspective of a web application m
 but where a background process collecting the data from a 3rd-party source needed to be able to change these "readonly"
 values.
 
-Copyright (c) 2010 Steve Emmons, released under the MIT license
+Copyright (c) 2010-2012 Steve Emmons, released under the MIT license
